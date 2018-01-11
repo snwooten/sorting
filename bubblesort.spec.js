@@ -25,7 +25,7 @@ describe('Bubble Sort', function(){
     expect( bubbleSort([1])).toEqual([1]);
 
   });
-  it('should throw a custum  TypeError when given non-numerical elements in the array', function() {
+  it('should throw a custum  TypeEtesterror when given non-numerical elements in the array', function() {
     expect(function(){
       bubbleSort(['a cat', function(){return 1 + 1}, 'a floofy dog', false]);
     }).toThrowError(TypeError, 'Elements must be numbers');
