@@ -1,4 +1,6 @@
 describe('Bubble Sort', function(){
+
+
   it('handles an empty array', function(){
     expect( bubbleSort([]) ).toEqual( [] );
   });
@@ -21,11 +23,13 @@ describe('Bubble Sort', function(){
 
   it('Sorts an array with only 1 element', function() {
     expect( bubbleSort([1])).toEqual([1]);
+
   });
   it('should throw a custum  TypeError when given non-numerical elements in the array', function() {
-    expect(bubbleSort(['a cat', function(){return 1 + 1}, 'a floofy dog', false]).toThrowError(TypeError, 'Elements must be numbers'));
+    expect(function(){
+      bubbleSort(['a cat', function(){return 1 + 1}, 'a floofy dog', false]);
+    }).toThrowError(TypeError, 'Elements must be numbers');
   });
-
 
 });
 
